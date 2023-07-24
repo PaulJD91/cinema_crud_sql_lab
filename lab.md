@@ -47,14 +47,51 @@ Use the supplied data as the source of data to answer the questions. Copy the SQ
  19 | Black Panther                       | 2018 | 21:00
 
 2.  Return ONLY the name column from the 'people' table
-    
+    # SELECT name FROM people
+    Homer Simpson
+    Marge Simpson
+    Lisa Simpson
+    Maggie Simpson
+    Patty Bouvier
+    Selma Bouvier
+    Kent Brockman
+    Ned Flanders
+    Barney Gumble
+    Itchy
+    Eric Cartman
+    Scratchy
+    Crusty the Clown
+    Montgomery Burns
+    Mayor Joe Quimby
+    Groundskeeper Willie
+
 3.  Oops! Someone spelled Krusty The Clown's name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
-4.  Return ONLY Homer Simpson's name from the 'people' table.
+    # UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
+    UPDATE 1
+
+4.  Return ONLY Homer Simpson's name from the 'people' table. 
+    # SELECT name FROM people WHERE name ='Homer Simpson'
+     Homer Simpson
+(1 row)
+
 5.  The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+    # DELETE FROM movies WHERE title = 'Batman Begins';
+    DELETE 1
 6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
+    # INSERT INTO people (name) VALUES ('Bart Simpson');
+    INSERT 1
+
 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
+    # DELETE FROM people WHERE name ='Eric Cartman'
+    DELETE 1
+
 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
+    # INSERT INTO movies (title, show_time) VALUES ('Avengers: Infinity War', '00:00')
+    INSERT 1
+
 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
+    # UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
+    UPDATE 1
 
 ## Extension
 
